@@ -87,7 +87,7 @@ main aside {
 
 /* Images in main content/aside */
 main img {
-  max-width: 100%;
+  max-width: 100px;
   height: auto;
   display: block;
   margin-bottom: 1rem;
@@ -114,4 +114,8 @@ footer {
     width: 100%;
     margin-bottom: 1rem;
   }
+}
+img {
+  max-width: 100px;
+  height: auto;
 }
