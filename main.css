@@ -1,0 +1,117 @@
+/* main.css */
+
+/* Basic reset + body defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+#nav_menu ul {
+  list-style: none;
+  background-color: #800000; /* dark red */
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#nav_menu ul li {
+  position: relative;
+}
+#nav_menu ul li a {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+}
+#nav_menu ul li a:hover {
+  background-color: #a00000;
+}
+#nav_menu a.current {
+  background-color: #ffcc00;
+  color: #800000;
+}
+/* Submenu hidden by default */
+#nav_menu ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 150px;
+  background-color: #800000;
+}
+#nav_menu ul ul li a {
+  padding: 0.8em;
+  border-bottom: 1px solid #999;
+}
+#nav_menu li:hover ul {
+  display: block;
+}
+
+/* Main layout */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+main section {
+  flex: 2;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px #ccc;
+}
+main aside {
+  flex: 1;
+  background-color: #ddd;
+  padding: 1rem;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Images in main content/aside */
+main img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Responsive media query */
+@media (max-width: 800px) {
+  #nav_menu ul {
+    width: 100%;
+  }
+  main {
+    flex-direction: column;
+  }
+  main section, main aside {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
